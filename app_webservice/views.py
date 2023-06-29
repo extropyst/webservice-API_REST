@@ -46,7 +46,12 @@ class MovementViewSet(viewsets.ModelViewSet):
     # permission_classes = (permissions.AllowAny,) #IsAdminUser, IsAuthenticatedOrReadOnly, )
 
 
-
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    # renderer_classes = (JSONRenderer, )
+    # authentication_classes = (SessionAuthentication,)
+    # permission_classes = (permissions.AllowAny,) #IsAdminUser, IsAuthenticatedOrReadOnly, )
 
 
 
